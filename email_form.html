@@ -1,24 +1,23 @@
-<form>
-  <p>Please type in the same email in Email 2 and Email 3 as Email 1.</p>
-  Email 1:
-  <input type="email"
-         name="email1"
-         id="firstEmail"
-         value="xue@incquery.com"><br/>
-  Email 2:
-  <input type="email"
-         name="email2"
-         id="secondEmail"
-         onchange="check()"
-         required><br/>
-  Email 3:
-    <input type="email"
-         name="email3"
-         id="thirdEmail"
-         onchange="check()"
-         required><br/>
+<html lang="en">
 
-  <input type="submit" 
-         onclick="return check()">
-  
-</form>
+<head>
+  <title>Email validation</title>
+  <script src="email_validation.js"></script>
+</head>
+
+<body>
+  <form>
+    <p>Please type in the same email in Email 2 and Email 3 as Email 1.</p>
+    Please type in your email:
+    <input type="email" name="email1" id="firstEmail" placeholder="xuelimiis@gmail.com" required><br />
+    Please repeat your email:
+    <input type="email" name="email2" id="secondEmail" onchange="check()" required><br />
+    Please confirm your email:
+    <input type="email" name="email3" id="thirdEmail" onchange="check()" required><br />
+
+    <input type="submit" onclick="return check()">
+
+  </form>
+</body>
+
+</html>
