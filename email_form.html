@@ -1,9 +1,23 @@
 <form>
-  <label>Preferred email address:
-  		<input type="email" id="email_addr" name="email1" value = "me@me.com" required></label>
+  <p>Please type in the same email in Email 2 and Email 3 as Email 1.</p>
+  Email 1:
+  <input type="email"
+         name="email1"
+         id="firstEmail"
+         value="xue@incquery.com"><br/>
+  Email 2:
+  <input type="email"
+         name="email2"
+         id="secondEmail"
+         onchange="check()"
+         required><br/>
+  Email 3:
+    <input type="email"
+         name="email3"
+         id="thirdEmail"
+         onchange="check()"
+         required><br/>
 
-  	<label>Repeat email address:
-  		<input type="email" id="email_repeat" name="email2" required onchange="check()"></label>
-
-  <input type = 'submit' value = "Confirm Emails!">
-</form>
+<!--when the first email doesn't match with the other two, the broswer should say "The emails input must match"-->
+  <input type="submit" 
+         onclick="return check()">
